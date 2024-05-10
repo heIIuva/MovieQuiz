@@ -45,6 +45,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gTe-bT-1I6" secondAttribute="height" multiplier="2:3" id="cVu-hb-r9A"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="" value="20"/>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг этого фильма меньше, чем 5?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmZ-9F-l7M" userLabel="Question Label">
                                         <rect key="frame" x="0.0" y="590" width="353" height="79"/>
@@ -126,8 +129,10 @@
                     <connections>
                         <outlet property="indexlabel" destination="Let-Rr-Wim" id="nIM-qD-B4c"/>
                         <outlet property="movieImage" destination="gTe-bT-1I6" id="WIN-j9-oQ3"/>
+                        <outlet property="noButton" destination="MGM-ed-eG8" id="NgF-eZ-SBF"/>
                         <outlet property="questionLabel" destination="lmZ-9F-l7M" id="YU7-W3-oKM"/>
                         <outlet property="questionTitlelabel" destination="ecl-bu-Fjg" id="dRE-yv-nVs"/>
+                        <outlet property="yesButton" destination="hIb-Ik-n15" id="ly0-cg-y8G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
