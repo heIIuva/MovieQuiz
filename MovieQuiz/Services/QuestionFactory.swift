@@ -48,16 +48,26 @@ final class QuestionFactory: QuestionFactoryProtocol {
             
             var imageData = Data()
            
-           do {
+            do {
                 imageData = try Data(contentsOf: movie.resizedImageURL)
             } catch {
+                self.delegate?.failedToLoadData(with: error)
                 print("Failed to load image")
             }
             
             let rating = Double(movie.rating) ?? 0
             
-            let text = "Рейтинг этого фильма \(ratingList.randomElement() ?? "") чем \(Int.random(in: 3...8))?"
-            let correctAnswer = rating > 7
+            let difference: String = ratingList.randomElement() ?? ""
+            let differenceValue: Int = Int.random(in: 3...8)
+            
+            let text = "Рейтинг этого фильма \(difference) чем \(differenceValue)?"
+            var correctAnswer: Bool
+            if difference == ratingList[0] {
+                correctAnswer = rating > Double(differenceValue)
+            } else {
+                correctAnswer = rating < Double(differenceValue)
+
+            }
             
             let question = QuizQuestion(image: imageData,
                                          text: text,

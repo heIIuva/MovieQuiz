@@ -51,7 +51,6 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
         questionLabel.font = UIFont.ysDisplayBold
         
         let questionFactory = QuestionFactory(moviesLoader: MoviesLoader(), delegate: self)
-        //questionFactory.delegate = self
         self.questionFactory = questionFactory
         
         let alertPresenter = AlertPresenter()
@@ -94,8 +93,11 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
     }
     
     private func hideLoadingIndicator() {
-        activityIndicator.isHidden = true
-        activityIndicator.stopAnimating()
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            activityIndicator.isHidden = true
+            activityIndicator.stopAnimating()
+        }
     }
     
     private func showNetworkError(message: String) {
