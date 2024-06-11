@@ -11,6 +11,7 @@ final class AlertPresenter: UIAlertController, AlertPresenterProtocol {
 
     weak var delegate: UIViewController?
     
+    
     func showAlert(result: AlertModel) {
         let alert = UIAlertController(
             title: result.title,
@@ -26,6 +27,6 @@ final class AlertPresenter: UIAlertController, AlertPresenterProtocol {
         delegate?.present(alert, animated: true, completion: nil)
         
     }
-
+    
 }
 
