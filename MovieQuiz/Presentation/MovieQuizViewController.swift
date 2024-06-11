@@ -88,6 +88,7 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
     }
     
     private func showLoadingIndicator() {
+        activityIndicator.color = .ypBlack
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
     }
@@ -104,7 +105,8 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
             guard let self else { return }
             currentQuestionIndex = 0
             correctAnswers = 0
-            self.questionFactory?.requestNextQuestion()
+            self.questionFactory?.loadData()
+            //self.questionFactory?.requestNextQuestion()
         }
         
         let viewModel = AlertModel(title: "Error",
