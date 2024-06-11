@@ -106,7 +106,6 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
             currentQuestionIndex = 0
             correctAnswers = 0
             self.questionFactory?.loadData()
-            //self.questionFactory?.requestNextQuestion()
         }
         
         let viewModel = AlertModel(title: "Error",
