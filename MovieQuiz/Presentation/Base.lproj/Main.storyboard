@@ -116,17 +116,23 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fNU-lW-u0N">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
                             <constraint firstItem="xOn-C1-xiV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="0YH-nj-dlN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xOn-C1-xiV" secondAttribute="trailing" constant="20" id="870-Dz-218"/>
+                            <constraint firstItem="fNU-lW-u0N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Bnq-EN-KCP"/>
                             <constraint firstItem="xOn-C1-xiV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="QDk-zH-7Vq"/>
+                            <constraint firstItem="fNU-lW-u0N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cDn-rM-WbR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xOn-C1-xiV" secondAttribute="bottom" id="yp9-Ye-21d"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="fNU-lW-u0N" id="4k4-qo-4qo"/>
                         <outlet property="indexlabel" destination="Let-Rr-Wim" id="nIM-qD-B4c"/>
                         <outlet property="movieImage" destination="gTe-bT-1I6" id="WIN-j9-oQ3"/>
                         <outlet property="noButton" destination="MGM-ed-eG8" id="NgF-eZ-SBF"/>
